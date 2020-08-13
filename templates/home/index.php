@@ -37,8 +37,8 @@
                 <br/><i>отредактировано админстратором</i>
                 <?php }?>
             </td>
-            <td class="status"><?= ($task->isCompleted ? 'Завершена' : 'В работе'); ?></td>
-            <?php if (Auth::check()) { ?><td><input type="checkbox" data-id="<?= $task->id; ?>" <?= ($task->isCompleted ? 'checked' : '0'); ?>/> Выполнена</td><?php } ?>
+            <td class="status"><?= ($task->isCompleted ? 'выполнено' : 'в работе'); ?></td>
+            <?php if (Auth::check()) { ?><td><input type="checkbox" data-id="<?= $task->id; ?>" <?= ($task->isCompleted ? 'checked' : '0'); ?>/> выполнено</td><?php } ?>
         </tr>
     <?php } ?>
     <?php if (count($tasks['data']) == 0) { ?>
