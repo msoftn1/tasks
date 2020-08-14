@@ -142,7 +142,7 @@
             'is_completed': this.checked
         };
 
-        var updateText = (this.checked) ? 'Завершена' : 'В работе';
+        var updateText = (this.checked) ? 'выполнено' : 'в работе';
         $('tr[data-id='+data.id+'] .status').text(updateText);
 
         $.post('<?=$url('change-status');?>', data, function (data) {
